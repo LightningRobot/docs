@@ -1,8 +1,8 @@
 import { defineConfig } from 'vitepress'
 
-// https://vitepress.dev/reference/site-config
-export default defineConfig({
+export const zh = defineConfig({
   title: "闪电机器人",
+  lang: 'zh-Hans',
   description: "闪电机器人官方文档。",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
@@ -22,10 +22,6 @@ export default defineConfig({
           { text: '插件开发', link: '#' }
         ]
       }
-    ],
-
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/LightningRobot/main' }
     ],
 
     editLink: {
