@@ -7,22 +7,34 @@ export default defineConfig({
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: '主页', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
+      { text: '网站主页', link: '/' },
+      { text: '使用教程', link: '/guide' }
     ],
 
     sidebar: [
       {
-        text: 'Examples',
+        text: '介绍', link: 'https://github.com/LightningRobot'
+      },
+      {
+        text: '起步',
         items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
+          { text: '快速上手', link: '/guide/quick-start' },
+          { text: '插件开发', link: '#' }
         ]
       }
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
-    ]
+      { icon: 'github', link: 'https://github.com/LightningRobot/main' }
+    ],
+
+    editLink: {
+      pattern: 'https://github.com/LightningRobot/docs/edit/main/docs/:path',
+      text: '在 GitHub 上编辑此页面'
+    },
+
+    footer: {
+      copyright: `版权所有 © 2023-${new Date().getFullYear()}`
+    }
   }
 })
