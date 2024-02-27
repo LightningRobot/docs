@@ -1,15 +1,10 @@
 {
-  "name": "lightningrobot-docs",
-  "version": "0.0.1",
-  "description": "闪电机器人官方文档。",
-  "license": "MIT",
-  "author": "Open Lightning Robot",
-  "repository": "https://github.com/lightningrobot/docs.git",
-  "devDependencies": {
-    "vuepress": "^2.0.0-rc.0"
-  },
-    "scripts": {
-      "docs:dev": "vuepress dev docs",
-      "docs:build": "vuepress build docs"
-    }
+  "name": "docs",
+  "description": "Docs for LightningRobot package",
+  "type": "module",
+  "scripts": {
+    "docs:dev": "vitepress dev",
+    "docs:build": "vitepress build",
+    "docs:preview": "vitepress preview"
+  }
 }
