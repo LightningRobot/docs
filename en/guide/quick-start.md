@@ -19,7 +19,7 @@ This robot framework is based on Python 3.13+, please make sure your system has 
 
 ### Install the scaffolding
 1. Click [here](https://github.com/LightningRobot/cli/releases) to download the latest version of scaffolding.
-In the subsequent process, run the command in the directory where the downloaded file was downloaded, and in Windowds, replace lrcli with lrcli.exe.
+In the subsequent process, run the command in the directory where the downloaded file was downloaded, and in Windowds, replace **lrcli** with **lrcli.exe**.
 
 2. Run the following command to check the version number
 ```bash
