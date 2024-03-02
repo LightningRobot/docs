@@ -18,10 +18,8 @@
 6. 重启电脑。此时，你的Python已经安装成功。
 
 ### 安装脚手架
-1. 打开命令行工具（在Linux下为终端）中输入以下命令：
-```bash
-pip install lightningrobot-cli
-```
+1. 点[这里](https://github.com/LightningRobot/cli/releases)下载最新版脚手架。
+在后续过程中，请在下载下载到的文件的所在目录下运行命令，在Windowds下，请将其中的**lrcli**替换为**lrcli.exe**。
 
 2. 运行下面命令查看版本号
 ```bash
@@ -29,11 +27,40 @@ lrcli version
 ```
 正常情况下，他应该返回：
 ```bash
-v0.0.1
+v0.1.6
 ```
 ## 创建项目
 进入你的[工作目录](#)，然后运行下面的命令创建一个机器人项目：
 ```bash
-lrcli create 项目名
+lrcli create
 ```
 随后，回答一些简单的问题，你的机器人项目就创建成功了。
+正常情况下，这个流程应该如下：
+```bash
+lrcli create
+      _      _       _     _         _             _____       _           _
+     | |    (_)     | |   | |       (_)           |  __ \     | |         | |
+     | |     _  __ _| |__ | |_ _ __  _ _ __   __ _| |__) |___ | |__   ___ | |_
+     | |    | |/ _` | '_ \| __| '_ \| | '_ \ / _` |  _  // _ \| '_ \ / _ \| __|
+     | |____| | (_| | | | | |_| | | | | | | | (_| | | \ \ (_) | |_) | (_) | |_
+     |______|_|\__, |_| |_|\__|_| |_|_|_| |_|\__, |_|  \_\___/|_.__/ \___/ \__|
+            __/ |                         __/ |
+           |___/                         |___/
+
+⚡闪电机器人⚡
+[询问]项目名称
+test3
+[询问]要使用哪个适配器
+console
+WARNING: pip is being invoked by an old script wrapper. This will fail in a future version of pip.
+Please see https://github.com/pypa/pip/issues/5599 for advice on fixing the underlying issue.
+To avoid this problem you can invoke Python with '-m pip' instead of running pip directly.
+[信息]成功安装适配器包 lighteningrobot-adapter-console！（来源：PyPI）
+[信息]创建成功！
+```
+## 运行机器人
+在刚才执行命令的工作目录，运行指令：
+```bash
+lrcli runbot
+```
+即可运行机器人。
