@@ -10,7 +10,7 @@ This section will show you how to create your bot using a lightning bot. The pro
 ### Install Python
 This robot framework is based on Python 3.13+, please make sure your system has Python 3.13+ installed. If you haven't already, follow the instructions below to install it.
 #### Install Python on Windows
-1. Click here (https://www.python.org/downloads/release/python-3130a4/) to access the Python download page.
+1. Click [here](https://www.python.org/downloads/release/python-3130a4/) to access the Python download page.
 2. Select the appropriate version according to your system type and download it. If you're not sure if it's x86 or x64, choose the x86 version. If you already have Python 3.13+ installed on your system, you don't need to install it.
 3. Once downloaded, double-click to open the downloaded program and click Next.
 4. Tick the "Add Python to PATH" option.
@@ -18,7 +18,7 @@ This robot framework is based on Python 3.13+, please make sure your system has 
 6. Restart your computer. At this point, your Python has been successfully installed.
 
 ### Install the scaffolding
-1. Click here (https://github.com/LightningRobot/cli/releases) to download the latest version of scaffolding.
+1. Click [here](https://github.com/LightningRobot/cli/releases) to download the latest version of scaffolding.
 In the subsequent process, run the command in the directory where the downloaded file was downloaded, and in Windowds, replace lrcli with lrcli.exe.
 
 2. Run the following command to check the version number
