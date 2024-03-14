@@ -1,36 +1,36 @@
-# 快速上手
+# 安装机器人
 ::: warning
-当前框架正在开发中，请谨慎使用！
+当前框架正在开发中，请谨慎使用！本文的Python在未表明情况下代表CPython。
 :::
-
-## 文章简介
 本章节将介绍如何使用闪电机器人创建你的机器人。项目基于闪电脚手架运行，并允许从商店安装插件。
 
 ## 环境准备
 ### 安装 Python
-本机器人框架基于Python 3.13+，请确保你的系统已安装Python 3.13+。如果尚未安装，请按照以下指引进行安装。
+本机器人框架基于Python 3+，请确保你的系统已安装Python 3+。如果尚未安装，请按照以下指引进行安装。
 #### 在Windows系统中安装Python
 1. 点击[这里](https://www.python.org/downloads/release/python-3130a4/)访问Python下载页面。
-2. 根据你的系统类型选择对应的版本进行下载。如果你不确定是X86还是X64，请选择X86版本。如果系统中已安装Python 3.13+，则无需安装。
+2. 根据你的系统类型选择对应的版本进行下载。如果你不确定是X86还是X64，请选择X86版本。
 3. 下载后，双击打开下载的程序，点击下一步（Next）。
 4. 勾选“Add Python to PATH”选项。
 5. 点击“Install Now”按钮，等待安装完成。
 6. 重启电脑。此时，你的Python已经安装成功。
 
 ### 安装脚手架
-1. 点[这里](https://github.com/LightningRobot/cli/releases)下载最新版脚手架。
-在后续过程中，请在下载下载到的文件的所在目录下运行命令，在Windowds下，请将其中的**lrcli**替换为**lrcli.exe**。
-
-2. 运行下面命令查看版本号
+1. 打开“终端”，输入以下命令安装脚手架：
+```bash
+pip install lightningrobot-cli
+```
+随后，运行下面命令查看版本号：
 ```bash
 lrcli version
 ```
-正常情况下，他应该返回：
+正常情况下，您应该看到：
 ```bash
-v0.1.6
+v0.1.9
 ```
+若不是这样，请重新安装或寻求帮助。
 ## 创建项目
-进入你的[工作目录](#)，然后运行下面的命令创建一个机器人项目：
+进入你的`工作目录`，然后运行下面的命令创建一个机器人项目：
 ```bash
 lrcli create
 ```
@@ -49,18 +49,28 @@ lrcli create
 
 ⚡闪电机器人⚡
 [询问]项目名称
-test3
+mybot
 [询问]要使用哪个适配器
 console
-WARNING: pip is being invoked by an old script wrapper. This will fail in a future version of pip.
-Please see https://github.com/pypa/pip/issues/5599 for advice on fixing the underlying issue.
-To avoid this problem you can invoke Python with '-m pip' instead of running pip directly.
 [信息]成功安装适配器包 lighteningrobot-adapter-console！（来源：PyPI）
 [信息]创建成功！
 ```
 ## 运行机器人
-在刚才执行命令的工作目录，运行指令：
-```bash
-lrcli runbot
+在刚才执行命令的工作目录，新建一个`.py`文件（例如命名为`run_robot.py`），内容如下：
+```python
+# 引入所需模块
+from lightningrobot import Main
+from lightningrobot_adapter_console import ConsoleAdapter
+import lightningrobot_plugin_test
+import asyncio
+adapter_instance = ConsoleAdapter()
+plugin = lightningrobot_plugin_test.main(adapter_instance)
+plugins = [plugin]
+main_instance = Main(adapter_instance, plugins)
+asyncio.run(main_instance.start())
 ```
-即可运行机器人。
+然后，运行下面的命令：
+```bash
+pip install lightningrobot-adapter-console
+```
+随后，启动此`.py`文件，即可启动您的机器人。
