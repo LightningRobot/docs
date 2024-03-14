@@ -13,7 +13,7 @@ hero:
       link: /guide/quick-start
     - theme: alt
       text: 开发插件
-      link: /guide/devplugin
+      link: /dev/guide
 
 features:
   - icon: 📦
