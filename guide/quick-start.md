@@ -52,25 +52,12 @@ lrcli create
 mybot
 [询问]要使用哪个适配器
 console
-[信息]成功安装适配器包 lighteningrobot-adapter-console！（来源：PyPI）
+[信息]成功安装适配器包 lightningrobot-adapter-console！（来源：PyPI）
 [信息]创建成功！
 ```
 ## 运行机器人
-在刚才执行命令的工作目录，新建一个`.py`文件（例如命名为`run_robot.py`），内容如下：
-```python
-# 引入所需模块
-from lightningrobot import Main
-from lightningrobot_adapter_console import ConsoleAdapter
-import lightningrobot_plugin_test
-import asyncio
-adapter_instance = ConsoleAdapter()
-plugin = lightningrobot_plugin_test.main(adapter_instance)
-plugins = [plugin]
-main_instance = Main(adapter_instance, plugins)
-asyncio.run(main_instance.start())
-```
-然后，运行下面的命令：
+在刚才执行命令的工作目录运行下面的命令：
 ```bash
-pip install lightningrobot-adapter-console
+python3 -m __init__
 ```
-随后，启动此`.py`文件，即可启动您的机器人。
+即可启动您的机器人。
