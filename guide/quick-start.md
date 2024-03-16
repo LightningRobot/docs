@@ -26,7 +26,7 @@ lrcli version
 ```
 正常情况下，您应该看到：
 ```bash
-v0.1.9
+v0.2.0
 ```
 若不是这样，请重新安装或寻求帮助。
 ## 创建项目
@@ -58,6 +58,7 @@ console
 ## 运行机器人
 在刚才执行命令的工作目录运行下面的命令：
 ```bash
+pip install -r requirements.txt
 python3 -m __init__
 ```
 即可启动您的机器人。
